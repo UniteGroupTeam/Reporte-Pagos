@@ -1,0 +1,133 @@
+/* Custom Styles for Seniors & Clarity */
+
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #1a1a1a;
+  background-color: #f8f9fa;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Card Styling */
+.neighbor-card {
+  border: none;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  border: 1px solid #e9ecef;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.neighbor-card:active {
+  transform: scale(0.98);
+}
+
+.neighbor-card .card-title {
+  font-size: 1.25rem;
+  /* 20px */
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: #0f172a;
+}
+
+.neighbor-card .card-subtitle {
+  font-size: 1rem;
+  /* 16px */
+  color: #64748b;
+  margin-bottom: 1rem;
+}
+
+/* Month Grid (Cuadrícula de Texto) */
+.month-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 cols x 3 rows = 12 */
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.month-tag {
+  background-color: #f1f5f9;
+  /* Light Gray */
+  color: #94a3b8;
+  /* Muted Text */
+  border-radius: 8px;
+  text-align: center;
+  padding: 8px 4px;
+  font-size: 0.85rem;
+  /* 14px */
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+  border: 1px solid transparent;
+}
+
+.month-tag.paid {
+  background-color: #dcfce7;
+  /* Light Green */
+  color: #166534;
+  /* Dark Green Text */
+  border: 1px solid #86efac;
+}
+
+.month-tag .amount {
+  font-size: 0.75rem;
+  /* 12px */
+  display: block;
+  margin-top: 2px;
+}
+
+/* Forms & Modals */
+.form-select-lg,
+.form-control-lg {
+  font-size: 1.25rem;
+  /* 20px */
+  border-radius: 12px;
+}
+
+.modal-content {
+  padding: 10px;
+}
+
+/* Header & Dashboard */
+.header-container {
+  background: #fff;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  padding-bottom: 15px;
+}
+
+#total-balance {
+  font-size: 3rem;
+  /* 48px base size */
+  line-height: 1;
+}
+
+/* Buscador grande */
+#search-input {
+  font-size: 1.2rem;
+  padding: 15px 20px;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 576px) {
+  .month-grid {
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 cols x 4 rows on very small screens */
+  }
+
+  #total-balance {
+    font-size: 2.5rem;
+    /* 40px */
+  }
+
+  .neighbor-card .card-title {
+    font-size: 1.1rem;
+  }
+}
